@@ -1,0 +1,186 @@
+@charset "utf8";
+
+/*********************** Global ***********************/
+/* font */
+/* @font-face {
+  font-family: "KiaSignatureFix";
+  font-style: normal;
+  font-weight: 100;
+  src: url(../font/KiaSignatureFixLight.woff2) format("woff2"),url(../font/KiaSignatureFixLight.woff) format("woff");
+  font-display: swap
+}
+
+@font-face {
+  font-family: "KiaSignatureFix";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../font/KiaSignatureFixRegular.woff2) format("woff2"),url(../font/KiaSignatureFixRegular.woff) format("woff");
+  font-display: swap
+}
+
+@font-face {
+  font-family: "KiaSignatureFix";
+  font-style: normal;
+  font-weight: 700;
+  src: url(../font/KiaSignatureFixBold.woff2) format("woff2"),url(../font/KiaSignatureFixBold.woff) format("woff");
+  font-display: swap
+} */
+
+
+/* reset */
+* {
+  box-sizing: border-box;
+}
+*,*::before,*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #fff;
+  font-size: 62.5%;
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased
+}
+
+body {
+  margin: 0;
+  color: #05141f;
+  font-size: 1em;
+  /* font-family: "KiaSignatureFix", sans-serif; */
+  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
+  -webkit-overflow-scrolling: touch
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section {
+  display: block
+}
+
+ul,ol,dl,dt,dd {
+  margin: 0;
+  padding: 0
+}
+
+ol,ul {
+  list-style: none
+}
+
+li {
+  list-style: none;
+}
+
+em,address {
+  font-style: normal
+}
+
+figure {
+  margin: 0
+}
+
+hr {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  overflow: visible;
+  height: 0
+}
+
+button {
+  /* -webkit-appearance: none; */
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  empty-cells: show
+}
+
+td {
+  vertical-align: middle
+}
+
+small {
+  font-size: 80%
+}
+
+audio,canvas,video {
+  display: inline-block
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  word-break: keep-all;
+  word-wrap: break-word
+}
+
+p {
+  word-break: keep-all;
+  word-wrap: break-word
+}
+
+a {
+  color: #0a0a0a;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects
+}
+
+iframe {
+  border: 0
+}
+
+img,video {
+  max-width: 100%;
+  height: auto;
+  border: 0;
+  vertical-align: top;
+  -ms-interpolation-mode: bicubic
+}
+
+svg:not(:root) {
+  overflow: hidden;
+  max-width: 100%;
+  vertical-align: top
+}
+
+sup {
+  vertical-align: text-top
+}
+
+sub {
+  vertical-align: text-bottom
+}
+
+sub,sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline
+}
+
+sub {
+  bottom: -0.25em
+}
+
+sup {
+  top: -0.5em
+}
+
+template,.hidden,[hidden] {
+  display: none !important
+}
