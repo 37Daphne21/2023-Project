@@ -7,19 +7,23 @@
   <meta name="format-detection" content="telephone=no">
   <link rel="shortcut icon" type="image/x-icon" href="./assets/images/favicon.ico">
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/js/js.js">
   <title>기아 글로벌 브랜드 사이트 | Movement that inspires</title>
 </head>
 <body>
   <div id="wrap">
     <!-- header -->
+    <!-- [JS] .has-sub 클래스가 붙어있는 .menu > li에 hover할 경우에만 .header에 .sub-open 클래스 추가 -->
     <header class="header">
       <div class="header__inner">
-        <a href="#none" class="header__logo">
-          <svg aria-hidden="true" class="svg svg--logo">
-            <use xlink:href="#symbol-logo"></use>
-          </svg>
-          <span class="blind">Kia New Logo</span>
-        </a>
+        <div class="header__logo">
+          <a href="#none" class="logo__link">
+            <svg aria-hidden="true" class="svg svg--logo">
+              <use xlink:href="#symbol-logo"></use>
+            </svg>
+            <span class="blind">Kia New Logo</span>
+          </a>
+        </div>
         <div class="header__nav">
           <div class="nav__inner">
             <div class="nav__toggle">
@@ -32,8 +36,8 @@
             </div>
             <div class="gnb">
               <ul class="menu">
-                <li>
-                  <a href="#none" class="menu__link">New Kia</a>
+                <li class="has-sub">
+                  <a href="#none" class="menu__link has-sub">New Kia</a>
                   <ul class="submenu">
                     <li>
                       <a href="#none" class="submenu__link">Our Symbol</a>
@@ -52,7 +56,7 @@
                 <li>
                   <a href="#none" class="menu__link">Sustainability</a>
                 </li>
-                <li>
+                <li class="has-sub">
                   <a href="#none" class="menu__link">Vehicles</a>
                   <ul class="submenu">
                     <li>
@@ -69,9 +73,9 @@
                 <li>
                   <a href="#none" class="menu__link">Magazine</a>
                 </li>
-                <li>
+                <li class="has-sub">
                   <a href="#none" class="menu__link">Company</a>
-                  <ul class="submenu">
+                  <ul class="submenu submenu--company">
                     <li>
                       <a href="#none" class="submenu__link">Company Information</a>
                     </li>
@@ -118,7 +122,9 @@
     <!-- // header -->
 
     <!-- main -->
-    <main class="main"></main>
+    <main class="main">
+      <div class="main__inner"></div>
+    </main>
     <!-- // main -->
 
     <!-- footer -->
