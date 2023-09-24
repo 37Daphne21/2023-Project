@@ -303,3 +303,61 @@ template,.hidden,[hidden] {
 }
 
 
+
+
+/*********************** Media Query ***********************/
+@media screen and (max-width: 959px) {
+  /* header */
+  .header__inner {
+    padding: 2.2rem 3rem;
+    height: 7.6rem;
+  }
+  .header__logo {
+    width: 8.9rem;
+    height: 2.4rem;
+  }
+  .header__nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .nav__inner {
+    width: 36.5rem;
+    height: 100vh;
+    background-color: antiquewhite;
+  }
+  .nav__toggle {
+
+  }
+  .gnb {
+    height: 100%;
+  }
+  .gnb .menu {
+    padding: 2.6rem 3rem 4rem;
+    height: calc(100% - 1.6rem);
+  }
+  .gnb .submenu {
+  
+  }
+  .gnb .util {
+    display: block;
+  }
+  .global {
+
+  }
+
+
+  /* footer */
+  .footer {
+    display: none;
+  }
+}
+@media screen and (max-width: 720px) {
+
+}
+@media screen and (max-width: 396px) {
+
+}
+@media screen and (max-width: 360px) {
+
+}
