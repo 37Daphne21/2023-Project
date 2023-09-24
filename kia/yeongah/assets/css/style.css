@@ -34,7 +34,6 @@
 *,*::before,*::after {
   box-sizing: border-box;
 }
-
 html {
   background-color: #fff;
   font-size: 62.5%;
@@ -44,7 +43,6 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased
 }
-
 body {
   margin: 0;
   color: #05141f;
@@ -54,39 +52,31 @@ body {
   font-family: 'Noto Sans KR', sans-serif;
   -webkit-overflow-scrolling: touch
 }
-
 article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section {
   display: block
 }
-
 ul,ol,dl,dt,dd {
   margin: 0;
   padding: 0
 }
-
 ol,ul {
   list-style: none
 }
-
 li {
   list-style: none;
 }
-
 em,address {
   font-style: normal
 }
-
 figure {
   margin: 0
 }
-
 hr {
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
   overflow: visible;
   height: 0
 }
-
 button {
   /* -webkit-appearance: none; */
   -webkit-box-sizing: content-box;
@@ -96,30 +86,24 @@ button {
   background: transparent;
   cursor: pointer
 }
-
 table {
   border-collapse: collapse;
   border-spacing: 0;
   empty-cells: show
 }
-
 td {
   vertical-align: middle
 }
-
 small {
   font-size: 80%
 }
-
 audio,canvas,video {
   display: inline-block
 }
-
 audio:not([controls]) {
   display: none;
   height: 0
 }
-
 h1,h2,h3,h4,h5,h6 {
   margin: 0;
   padding: 0;
@@ -127,23 +111,19 @@ h1,h2,h3,h4,h5,h6 {
   word-break: keep-all;
   word-wrap: break-word
 }
-
 p {
   word-break: keep-all;
   word-wrap: break-word
 }
-
 a {
   color: #0a0a0a;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects
 }
-
 iframe {
   border: 0
 }
-
 img,video {
   max-width: 100%;
   height: auto;
@@ -151,36 +131,29 @@ img,video {
   vertical-align: top;
   -ms-interpolation-mode: bicubic
 }
-
 svg:not(:root) {
   overflow: hidden;
   max-width: 100%;
   vertical-align: top
 }
-
 sup {
   vertical-align: text-top
 }
-
 sub {
   vertical-align: text-bottom
 }
-
 sub,sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
   vertical-align: baseline
 }
-
 sub {
   bottom: -0.25em
 }
-
 sup {
   top: -0.5em
 }
-
 template,.hidden,[hidden] {
   display: none !important
 }
@@ -194,3 +167,139 @@ template,.hidden,[hidden] {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+
+/* header */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 14.1rem;
+  background-color: transparent;
+  transition: background-color .4s;
+}
+.header.sub-open::before,
+.header.sub-open::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: transparent;
+  transition: background-color .4s;
+}
+.header.sub-open::before {
+  top: 76px;
+}
+.header.sub-open::after {
+  bottom: 0;
+}
+.header.sub-open:hover {
+  background-color: #fff;
+}
+.header.sub-open:hover.sub-open::before,
+.header.sub-open:hover.sub-open::after {
+  background-color: rgba(5, 20, 31, 0.2);
+}
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 3rem;
+}
+.header__logo {
+  padding: 2.2rem 0;
+}
+.logo__link {
+  display: block;
+  width: 11.8rem;
+  height: 3.2rem;
+}
+.header__logo .svg--logo {
+  width: 100%;
+  height: 100%;
+}
+.header__nav {
+
+}
+.nav__inner {
+  display: flex;
+  align-items: center;
+}
+.nav__toggle {
+
+}
+.gnb {
+
+}
+.gnb .menu {
+  display: flex;
+  align-items: center;
+}
+.gnb .menu > li {
+  position: relative;
+}
+.gnb .menu > li:hover .submenu > li {
+  display: flex;
+}
+.gnb .menu > li + li {
+  margin-left: 2rem;
+}
+.gnb .menu__link {
+  display: block;
+  padding: 2.8rem 1.3rem;
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 1.177;
+}
+.gnb .submenu {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+.gnb .submenu--company {
+  left: auto;
+  transform: none;
+  right: 0;
+}
+.gnb .submenu > li {
+  display: none;
+}
+.gnb .submenu__link {
+  display: block;
+  padding: 23px 1.5rem;
+  min-width: max-content;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.gnb .util {
+  display: none;
+}
+.global {
+  margin-left: 30px;
+}
+.global__btn {
+  width: 3.2rem;
+  height: 3.2rem;
+}
+.global-region__svg {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* footer */
+
+
+
+/* main */
+.main__inner {
+  margin-top: 7.6rem;
+}
+
+
