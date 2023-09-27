@@ -25,15 +25,16 @@
           </a>
         </div>
         <div class="header__nav">
+          <div class="nav__toggle">
+            <!-- [JS] .toggle__link 클릭 시 .is-active 클래스 추가 -->
+            <a href="#none" class="toggle__link is-active">
+              <span class="line"></span>
+              <span class="line"></span>
+              <span class="line"></span>
+              <span class="blind">메뉴</span>
+            </a>
+          </div>
           <div class="nav__inner">
-            <div class="nav__toggle">
-              <a href="#none" class="toggle__link">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="blind">메뉴</span>
-              </a>
-            </div>
             <div class="gnb">
               <ul class="menu">
                 <li class="has-sub">
@@ -158,9 +159,9 @@
 <img src="./vd_sb_quality_popup_wave_dolby_desktop.gif" alt="">
 
 
-  <svg aria-hidden="true" class="mypage__svg svg">
+  <!-- <svg aria-hidden="true" class="mypage__svg svg">
     <use xlink:href="#symbol-mypage"></use>
-  </svg>
+  </svg> -->
 
   <!-- svg -->
   <svg id="header-symbol" class="hidden" aria-hidden="true">
