@@ -193,7 +193,7 @@ template,.hidden,[hidden] {
   transition: background-color .4s;
 }
 .header.sub-open::before {
-  top: 76px;
+  top: 7.6rem;
 }
 .header.sub-open::after {
   bottom: 0;
@@ -271,7 +271,7 @@ template,.hidden,[hidden] {
 }
 .gnb .submenu__link {
   display: block;
-  padding: 23px 1.5rem;
+  padding: 2.3rem 1.5rem;
   min-width: max-content;
   font-size: 1.5rem;
   font-weight: 700;
@@ -281,7 +281,7 @@ template,.hidden,[hidden] {
   display: none;
 }
 .global {
-  margin-left: 30px;
+  margin-left: 3rem;
 }
 .global__btn {
   width: 3.2rem;
