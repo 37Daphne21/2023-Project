@@ -24,10 +24,10 @@
             <span class="blind">Kia New Logo</span>
           </a>
         </div>
-        <div class="header__nav">
+        <!-- [JS] .toggle__link 클릭 시 .header__nav에 .is-open 클래스 추가 -->
+        <div class="header__nav is-open">
           <div class="nav__toggle">
-            <!-- [JS] .toggle__link 클릭 시 .is-active 클래스 추가 -->
-            <a href="#none" class="toggle__link is-active">
+            <a href="#none" class="toggle__link">
               <span class="line"></span>
               <span class="line"></span>
               <span class="line"></span>
@@ -35,10 +35,19 @@
             </a>
           </div>
           <div class="nav__inner">
+            <div class="global nav__head">
+              <div class="global__btn">
+                <svg aria-hidden="true" class="global-region__svg svg">
+                  <use xlink:href="#symbol-global-region"></use>
+                </svg>
+                <span class="blind">Kia Global websites</span>
+              </div>
+            </div>
             <div class="gnb">
               <ul class="menu">
-                <li class="has-sub">
-                  <a href="#none" class="menu__link has-sub">New Kia</a>
+                <!-- [JS] Only MO : li.has-sub 활성화 시 .is-open 클래스 추가 -->
+                <li class="has-sub is-open">
+                  <a href="#none" class="menu__link">New Kia</a>
                   <ul class="submenu">
                     <li>
                       <a href="#none" class="submenu__link">Our Symbol</a>
@@ -106,14 +115,6 @@
                     <li><a href="#none" class="lang__link">한국어</a></li>
                   </ul>
                 </div>
-              </div>
-            </div>
-            <div class="global">
-              <div class="global__btn">
-                <svg aria-hidden="true" class="global-region__svg svg">
-                  <use xlink:href="#symbol-global-region"></use>
-                </svg>
-                <span class="blind">Kia Global websites</span>
               </div>
             </div>
           </div>
