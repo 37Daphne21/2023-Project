@@ -1,9 +1,6 @@
 @charset "utf8";
 /*********************** Global ***********************/
 /* font */
-/* @font-face {font-family: "KiaSignatureFix"; font-style: normal; font-weight: 100; src: url(../font/KiaSignatureFixLight.woff2) format("woff2"),url(../font/KiaSignatureFixLight.woff) format("woff"); font-display: swap}
-@font-face {font-family: "KiaSignatureFix"; font-style: normal; font-weight: 400; src: url(../font/KiaSignatureFixRegular.woff2) format("woff2"),url(../font/KiaSignatureFixRegular.woff) format("woff"); font-display: swap}
-@font-face {font-family: "KiaSignatureFix"; font-style: normal; font-weight: 700; src: url(../font/KiaSignatureFixBold.woff2) format("woff2"),url(../font/KiaSignatureFixBold.woff) format("woff"); font-display: swap}*/
 
 
 /* reset */
@@ -38,11 +35,32 @@ sup {top: -.5em}
 template,.hidden,[hidden] {display: none !important}
 
 
+/* icon */
+@font-face {
+  font-family: 'icon';
+  src: url("../font/icon.woff2") format("woff2"),url("../font/icon.woff") format("woff");
+  font-display: swap
+}
+.iconfont::before {display: inline-block; font-family: 'icon'; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none;}
+.iconfont--instagram::before {content: '\ea05';}
+.iconfont--facebook::before {content: '\ea03';}
+.iconfont--youtube::before {content: '\ea13';}
+
+
 /* common */
 .blind {position: absolute; width: 1px; height: 1px; clip: rect(0 0 0 0); overflow: hidden;}
+.div-line > li + li::before {content: ''; display: inline-block; width: 1px; height: 1.1rem; margin-left: 1rem; margin-right: 1rem; background-color: #05141f; opacity: 0.2;}
+.cpy {color: #000; opacity: 0.8; font-size: 1.4rem; font-weight: 300; letter-spacing: -0.02em;}
+.util__item {display: flex; align-items: center;}
+.util__item.sns > li + li {margin-left: 2rem;}
+.util__corp {font-size: 1.3rem;}
+.util__corp .corp__link {font-weight: 700;}
+.util__lang {font-size: 1.5rem;}
+.util__lang .lang--ko {font-weight: 700;}
+
 
 /* header */
-.header {position: absolute; top: 0; left: 0; width: 100%; height: 14.1rem; background-color: transparent; transition: background-color .4s;}
+.header {pointer-events: none; position: absolute; top: 0; left: 0; width: 100%; height: 14.1rem; background-color: transparent; transition: background-color .4s;}
 .header.sub-open::before,
 .header.sub-open::after {z-index: 9; content: ''; display: block; position: absolute; width: 100%; height: 1px; left: 0; right: 0; background-color: transparent; transition: background-color .4s;}
 .header.sub-open::before {top: 7.6rem;}
@@ -50,7 +68,7 @@ template,.hidden,[hidden] {display: none !important}
 .header.sub-open:hover {background-color: #fff;}
 .header.sub-open:hover.sub-open::before,
 .header.sub-open:hover.sub-open::after {background-color: rgba(5, 20, 31, .2);}
-.header__inner {display: flex; justify-content: space-between; padding: 0 3rem;}
+.header__inner {pointer-events: auto; display: flex; justify-content: space-between; padding: 0 3rem;}
 .header__logo {padding: 2.2rem 0;}
 .header__logo .logo__link {display: block; width: 11.8rem; height: 3.2rem;}
 .header__logo .svg--logo {width: 100%; height: 100%;}
@@ -82,12 +100,20 @@ template,.hidden,[hidden] {display: none !important}
 
 
 /* footer */
+.footer__inner {display: flex; align-items: center; padding: 2.2rem 3rem; border-top: 1px solid rgba(5,20,31,.2);}
+.footer .util {flex: 1; display: flex; justify-content: space-between; align-items: center; margin-right: 2.6rem;}
+.footer .util__corp {order: 1;}
+.footer .util__sns {order: 3;}
+.footer .util__lang {order: 2;}
+.footer .sns__link {display: block;}
+.footer .sns__link::before {font-size: 2.4rem;}
+.footer .cpy {margin-right: 1rem;}
 
 
-
+/*********************** Section ***********************/
 /* main */
+/* 임시 */ .main {height: 1500px;}
 .main__inner {margin-top: 7.6rem;}
-
 
 
 
@@ -120,7 +146,7 @@ template,.hidden,[hidden] {display: none !important}
   .global__btn {position: absolute; top: 3rem; left: 3rem; width: 2.6rem; height: 2.6rem;}
 
 
- /* footer */
+  /* footer */
   .footer {display: none;}
 }
 
@@ -135,3 +161,4 @@ template,.hidden,[hidden] {display: none !important}
 @media screen and (max-width: 360px) {
 
 }
+

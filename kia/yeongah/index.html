@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/js/js.js">
   <title>기아 글로벌 브랜드 사이트 | Movement that inspires</title>
+  <link rel="preload" href="./assets/font/icon.woff2" as="font" type="font/woff2" crossorigin="">
 </head>
 <body>
   <div id="wrap">
@@ -24,7 +25,7 @@
             <span class="blind">Kia New Logo</span>
           </a>
         </div>
-        <!-- [JS] .toggle__link 클릭 시 .header__nav에 .is-open 클래스 추가 -->
+        <!-- [JS] Only MO : .toggle__link 클릭 시 .header__nav에 .is-open 클래스 추가 -->
         <div class="header__nav is-open">
           <div class="nav__toggle">
             <a href="#none" class="toggle__link">
@@ -97,22 +98,22 @@
               </ul>
               <div class="util">
                 <div class="util__corp">
-                  <ul class="corp">
+                  <ul class="util__item corp div-line">
                     <li><a href="#none" class="corp__link">개인정보 처리방침</a></li>
                     <li><a href="#none" class="corp__link">이용약관</a></li>
                   </ul>
                 </div>
                 <div class="util__sns">
-                  <ul class="sns">
-                    <li><a href="#none" class="sns__link"><span class="blind">instagram</span></a></li>
-                    <li><a href="#none" class="sns__link"><span class="blind">facebook</span></a></li>
-                    <li><a href="#none" class="sns__link"><span class="blind">instagram</span></a></li>
+                  <ul class="util__item sns">
+                    <li><a href="#none" class="sns__link iconfont iconfont--instagram"><span class="blind">instagram</span></a></li>
+                    <li><a href="#none" class="sns__link iconfont iconfont--facebook"><span class="blind">facebook</span></a></li>
+                    <li><a href="#none" class="sns__link iconfont iconfont--youtube"><span class="blind">instagram</span></a></li>
                   </ul>
                 </div>
                 <div class="util__lang">
-                  <ul class="lang">
-                    <li><a href="#none" class="lang__link">English</a></li>
-                    <li><a href="#none" class="lang__link">한국어</a></li>
+                  <ul class="util__item lang div-line">
+                    <li><a href="#none" class="lang__link lang--en">English</a></li>
+                    <li><a href="#none" class="lang__link lang--ko">한국어</a></li>
                   </ul>
                 </div>
               </div>
@@ -131,34 +132,33 @@
 
     <!-- footer -->
     <footer class="footer">
-      <div class="util">
-        <div class="util__corp">
-          <ul class="corp">
-            <li><a href="#none" class="corp__link">개인정보 처리방침</a></li>
-            <li><a href="#none" class="corp__link">이용약관</a></li>
-          </ul>
+      <div class="footer__inner">
+        <div class="util">
+          <div class="util__corp">
+            <ul class="util__item corp div-line">
+              <li><a href="#none" class="corp__link">개인정보 처리방침</a></li>
+              <li><a href="#none" class="corp__link">이용약관</a></li>
+            </ul>
+          </div>
+          <div class="util__sns">
+            <ul class="util__item sns">
+              <li><a href="#none" class="sns__link iconfont iconfont--instagram"><span class="blind">instagram</span></a></li>
+              <li><a href="#none" class="sns__link iconfont iconfont--facebook"><span class="blind">facebook</span></a></li>
+              <li><a href="#none" class="sns__link iconfont iconfont--youtube"><span class="blind">instagram</span></a></li>
+            </ul>
+          </div>
+          <div class="util__lang">
+            <ul class="util__item lang div-line">
+              <li><a href="#none" class="lang__link lang--en">English</a></li>
+              <li><a href="#none" class="lang__link lang--ko">한국어</a></li>
+            </ul>
+          </div>
         </div>
-        <div class="util__lang">
-          <ul class="lang">
-            <li><a href="#none" class="lang__link">English</a></li>
-            <li><a href="#none" class="lang__link">한국어</a></li>
-          </ul>
-        </div>
-        <div class="util__sns">
-          <ul class="sns">
-            <li><a href="#none" class="sns__link"><span class="blind">instagram</span></a></li>
-            <li><a href="#none" class="sns__link"><span class="blind">facebook</span></a></li>
-            <li><a href="#none" class="sns__link"><span class="blind">instagram</span></a></li>
-          </ul>
-        </div>
+        <span class="cpy">© Kia Corporation</span>
       </div>
-      <div class="cpy"></div>
     </footer>
     <!-- // footer -->
   </div>
-
-<img src="./vd_sb_quality_popup_wave_dolby_desktop.gif" alt="">
-
 
   <!-- <svg aria-hidden="true" class="mypage__svg svg">
     <use xlink:href="#symbol-mypage"></use>
