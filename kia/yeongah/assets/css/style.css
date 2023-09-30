@@ -41,7 +41,7 @@ template,.hidden,[hidden] {display: none !important}
   src: url("../font/icon.woff2") format("woff2"),url("../font/icon.woff") format("woff");
   font-display: swap
 }
-.iconfont::before {display: inline-block; font-family: 'icon'; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none;}
+.iconfont::before {display: inline-block; font-family: 'icon'; font-size: 2.4rem; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-style: normal; font-variant: normal; font-weight: normal; text-decoration: none; text-transform: none;}
 .iconfont--instagram::before {content: '\ea05';}
 .iconfont--facebook::before {content: '\ea03';}
 .iconfont--youtube::before {content: '\ea13';}
@@ -49,6 +49,7 @@ template,.hidden,[hidden] {display: none !important}
 
 /* common */
 .blind {position: absolute; width: 1px; height: 1px; clip: rect(0 0 0 0); overflow: hidden;}
+.prevent-scroll {overflow: hidden; height: 100vh;}
 .div-line > li + li::before {content: ''; display: inline-block; width: 1px; height: 1.1rem; margin-left: 1rem; margin-right: 1rem; background-color: #05141f; opacity: 0.2;}
 .cpy {color: #000; opacity: 0.8; font-size: 1.4rem; font-weight: 300; letter-spacing: -0.02em;}
 .util__item {display: flex; align-items: center;}
@@ -73,9 +74,9 @@ template,.hidden,[hidden] {display: none !important}
 .header__logo .logo__link {display: block; width: 11.8rem; height: 3.2rem;}
 .header__logo .svg--logo {width: 100%; height: 100%;}
 
-.header__nav .nav__toggle {z-index: 99; display: none; position: absolute; top: 2rem; right: 2rem; width: 4.8rem; height: 3.7rem; background-color: red;}
+.header__nav .nav__toggle {z-index: 99; display: none; position: absolute; top: 2rem; right: 2rem; width: 4.8rem; height: 3.7rem;}
 .header__nav .toggle__link {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: block; width: 2.8rem; height: 1.7rem;}
-.header__nav .toggle__link .line {position: absolute; left: 0; display: block; width: 100%; height: 1px; background-color: #fff; transition: .4s;}
+.header__nav .toggle__link .line {position: absolute; left: 0; display: block; width: 100%; height: 1px; background-color: #000; transition: .4s;}
 .header__nav .toggle__link .line:nth-child(1) {top: 0;}
 .header__nav .toggle__link .line:nth-child(2) {top: 50%; transform: translateY(-50%);}
 .header__nav .toggle__link .line:nth-child(3) {bottom: 0;}
@@ -84,6 +85,9 @@ template,.hidden,[hidden] {display: none !important}
 .header__nav.is-open .toggle__link .line:nth-child(2) {transition: none; opacity: 0;}
 .header__nav.is-open .toggle__link .line:nth-child(3) {top: .8rem; transform: rotate(-45deg);}
 .nav__inner {display: flex; align-items: center; flex-direction: row-reverse;}
+.global {margin-left: 3rem;}
+.global__btn {width: 3.2rem; height: 3.2rem;}
+.global-region__svg {width: 100%; height: 100%;}
 .gnb .menu {display: flex; align-items: center;}
 .gnb .menu > li {position: relative;}
 .gnb .menu > li:hover .submenu > li {display: flex;}
@@ -94,9 +98,6 @@ template,.hidden,[hidden] {display: none !important}
 .gnb .submenu > li {display: none;}
 .gnb .submenu__link {display: block; padding: 2.3rem 1.5rem; min-width: max-content; font-size: 1.5rem; font-weight: 700; color: #05141f;}
 .gnb .util {display: none;}
-.global {margin-left: 3rem;}
-.global__btn {width: 3.2rem; height: 3.2rem;}
-.global-region__svg {width: 100%; height: 100%;}
 
 
 /* footer */
@@ -106,8 +107,8 @@ template,.hidden,[hidden] {display: none !important}
 .footer .util__sns {order: 3;}
 .footer .util__lang {order: 2;}
 .footer .sns__link {display: block;}
-.footer .sns__link::before {font-size: 2.4rem;}
 .footer .cpy {margin-right: 1rem;}
+
 
 
 /*********************** Section ***********************/
@@ -125,10 +126,12 @@ template,.hidden,[hidden] {display: none !important}
   .header__logo {padding: 2.6rem 0;}
   .header__logo .logo__link {width: 8.9rem; height: 2.4rem;}
 
-  .header__nav {z-index: 20; position: absolute; top: 0; right: 0;}
+  .header__nav {z-index: 20; position: fixed; top: 0; right: 0;}
   .header__nav.is-open .nav__inner {display: block;}
   .header__nav .nav__toggle {display: block;}
-  .nav__inner {width: 36.5rem; height: 100vh; display: none; background-color: antiquewhite}
+  .nav__inner {width: 36.5rem; height: 100vh; display: none;}
+  .global.nav__head {z-index: 98; position: fixed; width: 100%; height: 7.6rem; margin: 0;}
+  .global__btn {position: absolute; top: 3rem; left: 3rem; width: 2.6rem; height: 2.6rem;}
   .gnb {height: 100%;}
   .gnb .menu {overflow-x: hidden; overflow-y: auto; display: block; padding: 7.6rem 3rem 4rem; height: calc(100% - 16rem);}
   .gnb .menu > li {border-top: 1px solid rgba(0,0,0,.2);}
@@ -141,9 +144,9 @@ template,.hidden,[hidden] {display: none !important}
   .gnb .submenu {display: none; position: static; transform: none; padding-bottom: 2.5rem;}
   .gnb .submenu > li {display: block; margin-left: 0;}
   .gnb .submenu__link {padding: 1rem 3rem; width: 100%; font-size: 1.6rem; font-weight: 400;}
-  .gnb .util {display: block;}
-  .global.nav__head {z-index: 98; position: fixed; width: 100%; height: 7.6rem; margin: 0; background-color: antiquewhite;}
-  .global__btn {position: absolute; top: 3rem; left: 3rem; width: 2.6rem; height: 2.6rem;}
+  .gnb .util {display: flex; flex-direction: column; align-items: center; margin-top: 2.4rem;}
+  .gnb .util__sns {margin-top: 3.2rem;}
+  .gnb .util__lang {margin-top: 1.8rem;}
 
 
   /* footer */
