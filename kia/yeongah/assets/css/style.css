@@ -130,9 +130,10 @@ template,.hidden,[hidden] {display: none !important}
   .header__nav.is-open .nav__inner {display: block;}
   .header__nav .nav__toggle {display: block;}
   .nav__inner {width: 36.5rem; height: 100vh; display: none;}
+  .global {background-color: #fff;}
   .global.nav__head {z-index: 98; position: fixed; width: 100%; height: 7.6rem; margin: 0;}
   .global__btn {position: absolute; top: 3rem; left: 3rem; width: 2.6rem; height: 2.6rem;}
-  .gnb {height: 100%;}
+  .gnb {height: 100%; background-color: #fff;}
   .gnb .menu {overflow-x: hidden; overflow-y: auto; display: block; padding: 7.6rem 3rem 4rem; height: calc(100% - 16rem);}
   .gnb .menu > li {border-top: 1px solid rgba(0,0,0,.2);}
   .gnb .menu > li:last-child {border-bottom: 1px solid rgba(0,0,0,.2);}
