@@ -52,13 +52,16 @@ template,.hidden,[hidden] {display: none !important}
 .prevent-scroll {overflow: hidden; height: 100vh;}
 .div-line > li + li::before {content: ''; display: inline-block; width: 1px; height: 1.1rem; margin-left: 1rem; margin-right: 1rem; background-color: #05141f; opacity: .2;}
 .cpy {color: #000; opacity: .8; font-size: 1.4rem; font-weight: 300; letter-spacing: -.02em;}
+.text--white {color: #fff;}
 
+.btn-wrap {display: inline-block;}
 .btn {overflow: hidden; display: inline-block; position: relative; font-size: 1.6rem; text-align: center; font-weight: 700; line-height: 1.2; vertical-align: middle; transition: .2s ease-out;}
 .btn--outline {padding: 1.3rem 2.8rem 1.2rem; border: 1px solid #05141f;}
 .btn--outline:hover {border-color: #05141f; background-color: #05141f; color: #fff; opacity: 0.8;}
 .btn--outline.btn--white {border-color: #fff; color: #fff;}
 .btn--outline.btn--white:hover {border-color: #fff; background-color: #fff; color: #05141f;}
 .btn--sm {padding: .9rem 1.8rem .8rem; font-size: 1.4rem; line-height: 1.6rem;}
+.btn__text {position: relative; z-index: 1;}
 
 .util__item {display: flex; align-items: center;}
 .util__item.sns > li + li {margin-left: 2rem;}
@@ -128,8 +131,13 @@ template,.hidden,[hidden] {display: none !important}
 .section__text {margin-top: 1.6rem;}
 
 /* banner */
-.main-banner {height: calc(100vh / 1.5);}
-
+.section {position: relative; overflow: hidden;}
+.main-banner .section__inner {height: calc(100vh / 1.5);}
+.main-banner .banner {height: 100%;}
+.main-banner .banner__box {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%; max-height: 100vh;}
+.main-banner .banner__text {position: absolute; top: 20%; left: 10%;}
+.main-banner .banner__title {font-size: 4.2rem; line-height: 1.4; font-weight: 700; letter-spacing: -.2px;}
+.main-banner .banner__text .btn-wrap {margin-top: 1.5rem;}
 
 
 /*********************** Media Query ***********************/

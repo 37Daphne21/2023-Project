@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="./assets/js/js.js">
   <title>기아 글로벌 브랜드 사이트 | Movement that inspires</title>
   <link rel="preload" href="./assets/font/icon.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 </head>
 <body>
   <div id="wrap">
@@ -133,7 +135,7 @@
         <section class="section main-banner">
           <div class="section__inner">
             <h2 class="section__title blind">Banner</h2>
-            <div class="banner swiper">
+            <div class="banner swiper swiperMainBanner">
               <div class="swiper-wrapper">
                 <div class="banner__item swiper-slide">
                   <div class="banner__img">
@@ -142,7 +144,7 @@
                   <div class="banner__text">
                     <h3 class="banner__title">The Kia EV9</h3>
                     <span class="btn-wrap">
-                      <a href="#none" class="btn btn--outline btn--white">
+                      <a href="#none" class="btn btn--outline">
                         <span class="btn__text">더 보기</span>
                       </a>
                     </span>
@@ -153,9 +155,9 @@
                     <img src="./assets/images/main/hero-ev5-lg.jpg" alt="">
                   </div>
                   <div class="banner__text">
-                    <h3 class="banner__title">The Kia Concept EV5</h3>
+                    <h3 class="banner__title text--white">The Kia Concept EV5</h3>
                     <span class="btn-wrap">
-                      <a href="#none" class="btn btn--outline btn--white btn--sm">
+                      <a href="#none" class="btn btn--outline btn--white">
                         <span class="btn__text">더 보기</span>
                       </a>
                     </span>
@@ -421,5 +423,25 @@
     </defs>
   </svg>
   <!-- // svg -->
+
+  <script>
+    new Swiper('.swiperMainBanner', {
+      autoplay: {
+      delay: 5000,
+    },
+    loop: false,
+    slidesPerView: 1,
+    spaceBetween: 0,
+    watchOverflow: true,
+    pagination: {
+      el: '.swiperMainBanner .swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      prevEl: '.swiper-prev',
+      nextEl: '.swiper-next',
+    },
+  });
+  </script>
 </body>
 </html>
