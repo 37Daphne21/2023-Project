@@ -92,7 +92,7 @@ template,.hidden,[hidden] {display: none !important}
 .gnb .menu > li {position: relative;}
 .gnb .menu > li:hover .submenu > li {display: flex;}
 .gnb .menu > li + li {margin-left: 2rem;}
-.gnb .menu__link {display: block; padding: 2.8rem 1.3rem; font-size: 1.7rem; font-weight: 700; color: #05141f;}
+.gnb .menu__link {display: block; padding: 3rem 1.5rem; font-size: 1.7rem; font-weight: 700; color: #05141f;}
 .gnb .submenu {position: absolute; left: 50%; transform: translateX(-50%); display: flex;}
 .gnb .submenu--company {left: auto; transform: none; right: 0;}
 .gnb .submenu > li {display: none;}
@@ -113,7 +113,7 @@ template,.hidden,[hidden] {display: none !important}
 
 /*********************** Section ***********************/
 /* main */
-.main__inner {margin-top: 7.6rem;}
+.main__inner {margin-top: 8rem;}
 
 
 
