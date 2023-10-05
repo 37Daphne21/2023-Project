@@ -50,8 +50,14 @@ template,.hidden,[hidden] {display: none !important}
 /* common */
 .blind {position: absolute; width: 1px; height: 1px; clip: rect(0 0 0 0); overflow: hidden;}
 .prevent-scroll {overflow: hidden; height: 100vh;}
-.div-line > li + li::before {content: ''; display: inline-block; width: 1px; height: 1.1rem; margin-left: 1rem; margin-right: 1rem; background-color: #05141f; opacity: 0.2;}
-.cpy {color: #000; opacity: 0.8; font-size: 1.4rem; font-weight: 300; letter-spacing: -0.02em;}
+.div-line > li + li::before {content: ''; display: inline-block; width: 1px; height: 1.1rem; margin-left: 1rem; margin-right: 1rem; background-color: #05141f; opacity: .2;}
+.cpy {color: #000; opacity: .8; font-size: 1.4rem; font-weight: 300; letter-spacing: -.02em;}
+
+.btn {overflow: hidden; display: inline-block; position: relative; font-size: 1.6rem; text-align: center; font-weight: 700; line-height: 1.2; vertical-align: middle; transition: .2s ease-out;}
+.btn--outline {padding: 1.3rem 2.8rem 1.2rem; border: 1px solid #05141f;}
+.btn--white {border-color: #fff; color: #fff;}
+.btn--sm {padding: .9rem 1.8rem .8rem; font-size: 1.4rem; line-height: 1.6rem;}
+
 .util__item {display: flex; align-items: center;}
 .util__item.sns > li + li {margin-left: 2rem;}
 .util__corp {font-size: 1.3rem;}
@@ -113,7 +119,12 @@ template,.hidden,[hidden] {display: none !important}
 
 /*********************** Section ***********************/
 /* main */
-.main__inner {margin-top: 8rem;}
+.main {font-size: 1.6rem; line-height: 1.6;}
+.main__inner {padding-top: 8rem;}
+.section__head {text-align: center;}
+.section__title {font-size: 3.2rem; font-weight: 700;}
+.section__text {margin-top: 1.6rem;}
+.main-banner {height: calc(100vh / 1.5);}
 
 
 
