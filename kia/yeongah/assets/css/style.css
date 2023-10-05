@@ -55,7 +55,9 @@ template,.hidden,[hidden] {display: none !important}
 
 .btn {overflow: hidden; display: inline-block; position: relative; font-size: 1.6rem; text-align: center; font-weight: 700; line-height: 1.2; vertical-align: middle; transition: .2s ease-out;}
 .btn--outline {padding: 1.3rem 2.8rem 1.2rem; border: 1px solid #05141f;}
-.btn--white {border-color: #fff; color: #fff;}
+.btn--outline:hover {border-color: #05141f; background-color: #05141f; color: #fff; opacity: 0.8;}
+.btn--outline.btn--white {border-color: #fff; color: #fff;}
+.btn--outline.btn--white:hover {border-color: #fff; background-color: #fff; color: #05141f;}
 .btn--sm {padding: .9rem 1.8rem .8rem; font-size: 1.4rem; line-height: 1.6rem;}
 
 .util__item {display: flex; align-items: center;}
