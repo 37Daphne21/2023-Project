@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" class="custom-scroll">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -137,6 +137,20 @@
             <h2 class="section__title blind">Banner</h2>
             <div class="banner swiper swiperMainBanner">
               <div class="swiper-wrapper">
+                <div class="banner__item swiper-slide">
+                  <div class="banner__img">
+                    <img class="image--pc" src="./assets/images/main/hero-evday-teaser-lg.jpg" alt="">
+                    <img class="image--mo" src="./assets/images/main/hero-evday-teaser-sm.jpg" alt="">
+                  </div>
+                  <div class="banner__text text--white">
+                    <h3 class="banner__title">2023 Kia EV Day</h3>
+                    <span class="btn-wrap">
+                      <a href="#none" class="btn btn--outline btn--white">
+                        <span class="btn__text">더 보기</span>
+                      </a>
+                    </span>
+                  </div>
+                </div>
                 <div class="banner__item swiper-slide">
                   <div class="banner__img">
                     <img src="./assets/images/main/hero-ev9-3-lg.jpg" alt="">
@@ -426,22 +440,22 @@
 
   <script>
     new Swiper('.swiperMainBanner', {
-      autoplay: {
-      delay: 5000,
-    },
-    loop: false,
-    slidesPerView: 1,
-    spaceBetween: 0,
-    watchOverflow: true,
-    pagination: {
-      el: '.swiperMainBanner .swiper-pagination',
-      clickable: true,
-    },
-    navigation: {
-      prevEl: '.swiper-prev',
-      nextEl: '.swiper-next',
-    },
-  });
+      // autoplay: {
+      //   delay: 5000,
+      // },
+      loop: false,
+      slidesPerView: 1,
+      spaceBetween: 0,
+      watchOverflow: true,
+      pagination: {
+        el: '.swiperMainBanner .swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        prevEl: '.swiper-prev',
+        nextEl: '.swiper-next',
+      },
+    });
   </script>
 </body>
 </html>
