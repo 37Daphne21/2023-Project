@@ -5,3 +5,8 @@
 
   (가능 시 추가) header의 .util과 footer의 .util 마크업 동일. Mo 화면에서 footer의 .util을 header 안으로 삽입되도록 구현 필요
 */
+
+/*
+    * To Do List
+  1) movement swiper option 조절 / swiper scroll (pagination) 커스텀
+*/

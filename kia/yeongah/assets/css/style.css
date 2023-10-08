@@ -175,6 +175,13 @@ sup {top: -.5em}
 .main-movement .movement__item:hover .movement__img::before {opacity: 0;}
 .main-movement .swiper-scrollbar {display: none;}
 
+/* vehicles */
+.main-vehicles .section__inner {background-color: #f6f2ed;}
+
+
+/* magazine */
+
+
 
 /*********************** Media Query ***********************/
 @media screen and (max-width: 1199px) {
@@ -222,7 +229,6 @@ sup {top: -.5em}
   .gnb .util__sns {margin-top: 3.2rem;}
   .gnb .util__lang {margin-top: 1.8rem;}
 
-
   /* main */
   .main__inner {padding-top: 0;}
   .section__inner {padding: 4rem 0;}
@@ -239,7 +245,6 @@ sup {top: -.5em}
   .main-movement .movement .movement__item {flex: none; padding-bottom: 46.306%;}
   .main-movement .movement .movement__title {font-size: 1.6rem;}
   .main-movement .swiper-scrollbar {display: block;}
-
 
   /* footer */
   .footer {display: none;}
