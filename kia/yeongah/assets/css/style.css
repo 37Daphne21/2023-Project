@@ -173,6 +173,7 @@ sup {top: -.5em}
 .main-movement .movement__item:hover .movement__text .text-more {display: inline-block;}
 .main-movement .movement__item:hover .movement__title {font-size: 2.8rem; text-align: left;}
 .main-movement .movement__item:hover .movement__img::before {opacity: 0;}
+.main-movement .swiper-scrollbar {display: none;}
 
 
 /*********************** Media Query ***********************/
@@ -237,7 +238,7 @@ sup {top: -.5em}
   .main-movement .movement {overflow: visible; padding-right: 21.9%; padding-bottom: 3.6rem;}
   .main-movement .movement .movement__item {flex: none; padding-bottom: 46.306%;}
   .main-movement .movement .movement__title {font-size: 1.6rem;}
-
+  .main-movement .swiper-scrollbar {display: block;}
 
 
   /* footer */
