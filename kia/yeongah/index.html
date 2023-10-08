@@ -139,8 +139,8 @@
               <div class="swiper-wrapper">
                 <div class="banner__item swiper-slide">
                   <div class="banner__img">
-                    <img class="image--pc" src="./assets/images/main/hero-evday-teaser-lg.jpg" alt="">
-                    <img class="image--mo" src="./assets/images/main/hero-evday-teaser-sm.jpg" alt="">
+                    <img class="pc-show" src="./assets/images/main/hero-evday-teaser-lg.jpg" alt="">
+                    <img class="mo-show" src="./assets/images/main/hero-evday-teaser-sm.jpg" alt="">
                   </div>
                   <div class="banner__text text--white">
                     <h3 class="banner__title">2023 Kia EV Day</h3>
@@ -185,12 +185,12 @@
         <!-- // banner -->
         <!-- movement -->
         <section class="section main-movement">
-          <div class="section__inner">
+          <div class="section__inner section-area">
             <div class="section__head">
-              <h2 class="section__title"><span>Movement</span><span>that inspires</span></h2>
+              <h2 class="section__title"><span class="break-pc">Movement</span><span>that inspires</span></h2>
             </div>
-            <div class="movement swiper">
-              <div class="swiper-wrapper">
+            <div class="movement swiper swiperMainMovement">
+              <div class="movement__box swiper-wrapper">
                 <div class="movement__item swiper-slide">
                   <a href="#none" class="go-link">
                     <div class="movement__img">
@@ -236,7 +236,7 @@
                   </a>
                 </div>
               </div>
-              <div class="swiper-scrollbar"></div>
+              <div class="mo-show swiper-scrollbar"></div>
             </div>
           </div>
         </section>
@@ -252,7 +252,7 @@
                 사진, 영상 및 다이나믹한 가상 체험을 통해 기아의 최신 차량을 경험하세요.
               </p>
             </div>
-            <div class="vehicles swiper">
+            <div class="vehicles section-area swiper ">
               <div class="swiper-wrapper">
                 <div class="vehicles__item swiper-slide">
                   <div class="vehicles__img">
@@ -336,7 +336,7 @@
                 기아의 파트너십, 비전, 브랜드 앰버서더까지. 움직임 속에서 영감을 얻는 기아의 여정에 초대합니다.
               </p>
             </div>
-            <div class="magazine">
+            <div class="magazine section-area">
               <div class="magazine__list">
                 <div class="magazine__item">
                   <a href="#none" class="go-link">
@@ -439,7 +439,7 @@
   <!-- // svg -->
 
   <script>
-    new Swiper('.swiperMainBanner', {
+    swiperMainBanner = new Swiper('.swiperMainBanner', {
       // autoplay: {
       //   delay: 5000,
       // },
@@ -449,6 +449,26 @@
       watchOverflow: true,
       pagination: {
         el: '.swiperMainBanner .swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        prevEl: '.swiper-prev',
+        nextEl: '.swiper-next',
+      },
+    });
+
+    swiperMainMovement = new Swiper('.swiperMainMovement', {
+      breakpoints: {
+        960: {
+          slidesPerView: 4,
+        }
+      },
+      loop: false,
+      slidesPerView: 1,
+      spaceBetween: 0,
+      watchOverflow: true,
+      pagination: {
+        el: '.swiperMainMovement .swiper-pagination',
         clickable: true,
       },
       navigation: {

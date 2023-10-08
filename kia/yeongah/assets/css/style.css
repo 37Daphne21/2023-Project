@@ -58,8 +58,9 @@ sup {top: -.5em}
 .div-line > li + li::before {content: ''; display: inline-block; width: 1px; height: 1.1rem; margin-left: 1.1rem; margin-right: 1.1rem; background-color: #05141f; opacity: 0.2;}
 .cpy {color: #000; opacity: 0.8; font-size: 1.4rem; font-weight: 300; letter-spacing: -.02em;}
 .text--white {color: #fff;}
-.image--pc {display: block;}
-.image--mo {display: none;}
+.pc-show {display: block;}
+.mo-show {display: none;}
+.break-pc {display: block;}
 
 .btn-wrap {display: inline-block;}
 .btn {overflow: hidden; display: inline-block; position: relative; font-size: 1.6rem; text-align: center; font-weight: 700; line-height: 1.2; vertical-align: middle; transition: 0.2s ease-out;}
@@ -134,6 +135,9 @@ sup {top: -.5em}
 /* main common */
 .main {font-size: 1.6rem; line-height: 1.6;}
 .main__inner {padding-top: 8rem;}
+.section__inner {padding: 6rem 0;}
+.section__inner:first-child {padding-top: 0;}
+.section-area {max-width: 128rem; margin: 0 auto;}
 .section__head {text-align: center;}
 .section__title {font-size: 3.2rem; font-weight: 700;}
 .section__text {margin-top: 1.6rem; opacity: 0.8;}
@@ -147,9 +151,22 @@ sup {top: -.5em}
 .main-banner .banner__title {font-size: 4.2rem; line-height: 1.4; font-weight: 700; letter-spacing: -.2px;}
 .main-banner .banner__text .btn-wrap {margin-top: 1.5rem;}
 
+/* movement */
+.main-movement .section__inner {display: flex; align-items: center;}
+.main-movement .section__head {flex: 1;}
+.main-movement .section__title {text-align: left;}
+.main-movement .movement {flex: 3;}
+.main-movement .movement__box {display: flex; align-items: center;}
+.main-movement .movement__item {padding: 0 15px; flex: 1; height: 22rem; transition: 0.4s;}
+.main-movement .movement__item:hover {flex: 2;}
+.main-movement .movement__img {height: 100%;}
+.main-movement .movement__img img {height: 100%; object-fit: cover;}
+.main-movement .movement__text {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #fff;}
+
 
 /*********************** Media Query ***********************/
 @media screen and (max-width: 1199px) {
+  /* header */
   .global {margin-left: 0.8rem;}
   .gnb .menu > li + li {margin-left: 1rem;}
   .gnb .menu__link {padding: 3.3rem 1.3rem 2.7rem;}
@@ -201,8 +218,8 @@ sup {top: -.5em}
 
 @media screen and (max-width: 719px) {
   /* common */
-  .image--pc {display: none;}
-  .image--mo {display: block;}
+  .pc-show {display: none;}
+  .mo-show {display: block;}
 
   /* main */
   .main-banner .banner__text {left: 50%; top: auto; bottom: 19%; transform: translateX(-50%); padding: 0 2rem; width: 100%; text-align: center;}
