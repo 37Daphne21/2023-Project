@@ -177,6 +177,11 @@ sup {top: -.5em}
 
 /* vehicles */
 .main-vehicles .section__inner {background-color: #f6f2ed;}
+.main-vehicles .vehicles {overflow: visible; padding-right: 17%; padding-bottom: 4.2rem;}
+.main-vehicles .vehicles__item + .vehicles__item {margin-left: 4rem;}
+.main-vehicles .vehicles__img::before {content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to top, rgba(7,7,8,0.5) 10%, rgba(7,7,8,0));}
+.main-vehicles .vehicles__text {position: absolute; left: 6.5rem; bottom: 5.5rem; color: #fff;}
+.main-vehicles .vehicles__title {margin-bottom: 2rem; font-size: 2.2rem; line-height: 1.4; font-weight: 700;}
 
 
 /* magazine */
@@ -191,7 +196,7 @@ sup {top: -.5em}
   .gnb .menu__link {padding: 3.3rem 1.3rem 2.7rem;}
 
   /* main */
-  .section-area {max-width: 136rem; margin: 0 3rem;}
+  .section .section-area {max-width: 136rem; margin: 0 3rem;}
 }
 
 @media screen and (max-width: 959px) {
@@ -241,10 +246,16 @@ sup {top: -.5em}
   .main-movement .section__inner {display: block;}
   .main-movement .section__title {text-align: center;}
   .main-movement .section__head {margin-bottom: 3rem;}
-  .main-movement .movement {overflow: visible; padding-right: 21.9%; padding-bottom: 3.6rem;}
+  .main-movement .movement {overflow: visible; padding-right: 21.9%; padding-bottom: 3.2rem;}
   .main-movement .movement .movement__item {flex: none; padding-bottom: 46.306%;}
   .main-movement .movement .movement__title {font-size: 1.6rem;}
   .main-movement .swiper-scrollbar {display: block;}
+
+  .main-vehicles .vehicles {padding-right: 20.3%;}
+  .main-vehicles .vehicles__item + .vehicles__item {margin-left: 3rem;}
+  .main-vehicles .vehicles__text {left: 3rem; bottom: 3rem;}
+  .main-vehicles .vehicles__title {margin-bottom: 1rem; font-size: 2rem;}
+
 
   /* footer */
   .footer {display: none;}
@@ -257,6 +268,7 @@ sup {top: -.5em}
 
   /* main */
   .main-banner .banner__text {left: 50%; top: auto; bottom: 19%; transform: translateX(-50%); padding: 0 2rem; width: 100%; text-align: center;}
+  .main-vehicles .vehicles {padding-right: 18.2%;}
 }
 
 @media screen and (max-width: 396px) {
