@@ -183,8 +183,8 @@ sup {top: -.5em}
 .main-vehicles .vehicles__text {position: absolute; left: 6.5rem; bottom: 5.5rem; color: #fff;}
 .main-vehicles .vehicles__title {margin-bottom: 2rem; font-size: 2.2rem; line-height: 1.4; font-weight: 700;}
 
-
 /* magazine */
+.main-magazine .magazine__list {display: flex;}
 
 
 
