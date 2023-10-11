@@ -7,6 +7,7 @@
 */
 
 /*
-    * To Do List
-  1) movement swiper option 조절 / swiper scroll (pagination) 커스텀
+    * To Do List (Details)
+  1) Header : menu toggle open되어있을 때 media query details 맞추기 / menu hover 시 target에 border 부여
+  2) Swiper : swiper scroll (pagination) 커스텀 / script에서 swiper option값 조절
 */
