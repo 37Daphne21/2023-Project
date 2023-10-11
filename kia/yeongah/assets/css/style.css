@@ -1,13 +1,10 @@
 @charset "utf8";
 /*********************** Global ***********************/
-/* font */
-
-
 /* reset */
 * {box-sizing: border-box;}
 *,*::before,*::after {box-sizing: border-box;}
 html {background-color: #fff; font-size: 62.5%; line-height: 1.15; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased}
-body {margin: 0; color: #05141f; font-size: 1em; /* font-family: "KiaSignatureFix", sans-serif; */ font-family: 'Noto Sans', sans-serif; font-family: 'Noto Sans KR', sans-serif; -webkit-overflow-scrolling: touch}
+body {margin: 0; color: #05141f; font-size: 1em; font-family: 'Noto Sans', sans-serif; font-family: 'Noto Sans KR', sans-serif; -webkit-overflow-scrolling: touch}
 article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section {display: block}
 ul,ol,dl,dt,dd {margin: 0; padding: 0}
 ol,ul {list-style: none}
@@ -47,11 +44,6 @@ sup {top: -.5em}
 
 
 /* common */
-/* .custom-scroll {overflow: overlay;}
-.custom-scroll::-webkit-scrollbar {display: none;}
-.custom-scroll::-webkit-scrollbar-thumb {background: rgba(0,0,0,0.2);}
-.custom-scroll::-webkit-scrollbar-track {background: transparent;} */
-
 .hidden {display: none !important;}
 .blind {position: absolute; width: 1px; height: 1px; clip: rect(0 0 0 0); overflow: hidden;}
 .prevent-scroll {overflow: hidden; height: 100vh;}
