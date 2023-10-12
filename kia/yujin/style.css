@@ -2,10 +2,18 @@
 ol, ul {list-style: none;}
 a {color: #05141f; text-decoration: none;}
 button {padding: 0; border: 0; background-color: transparent;}
-img {width: 100%; height: 100%;}
+img {width: 100%; height: 100%; vertical-align: top;}
 html {font-size: 62.5%; line-height: 1.15;}
 body {color: #05141f; font-size: 1em; font-family: "KiaSignatureFix", sans-serif;}
 .hidden {position: absolute; overflow: hidden; width: 1px; height: 1px; clip: rect(1px, 1px, 1px, 1px);}
+.btn {display: inline-block; padding: 13px 28px 12px 28px; font-size: 1.6rem; font-weight: 700; line-height: 1.2; vertical-align: middle; transition: all .2s ease-out;}
+.btn--small {padding: 9px 18px 8px; font-size: 14px; line-height: 16px}
+.btn--outline-white {color: #fff; border: 1px solid #fff;}
+.btn.btn--outline-white:hover,
+.btn.btn--outline-white:focus {color: #05141f; background-color: #fff; opacity: .8;}
+.btn--outline-black {color: #05141f; border: 1px solid #05141f;}
+.btn.btn--outline-black:hover,
+.btn.btn--outline-black:focus {color: #fff; background-color: #05141f; opacity: .8;}
 
 @font-face {
   font-family: 'icon';
@@ -24,6 +32,7 @@ body {color: #05141f; font-size: 1em; font-family: "KiaSignatureFix", sans-serif
   top: 0;
   left: 0;
   background-color: transparent;
+  z-index: 2;
 }
 .header__container {
   display: flex;
@@ -128,6 +137,215 @@ body {color: #05141f; font-size: 1em; font-family: "KiaSignatureFix", sans-serif
   opacity: .8;
   text-align: center;
 }
+/* banner */
+.main__banner {
+  position: relative;
+  overflow: hidden;
+}
+.banner {
+  height: calc(100vh / 1.5);
+}
+.banner__img {
+  width: 100%;
+  height: 100%;
+}
+.banner__img::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.1);
+}
+.banner__img img {
+  object-fit: cover;
+}
+.desktop-src {
+  display: block;
+}
+.mobile-src {
+  display: none;
+}
+.banner__cont {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  color: #fff;
+}
+.banner__title {
+  font-size: 4.2rem;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: -.2px;
+}
+.banner__cont .btn {
+  margin-top: 1.5rem;
+}
+
+/* movement */
+.main__section.movement .section__inner {
+  flex-direction: row;
+}
+.main__section.movement .section__title {
+  flex: 1;
+}
+.movement-swiper {
+  flex: 3;
+}
+.movement__item {
+  flex: 1;
+  text-align: center;
+  height: 0;
+  padding-bottom: 22.76%;
+  transition: all .4s;
+  position: relative;
+}
+.movement__item + .movement__item {
+  margin-left: 3rem;
+}
+.movement__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+.movement__img::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(7,7,8,0.3);
+}
+
+.movement__img img {
+  object-fit: cover;
+}
+.movement__cont {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.movement__title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.movement__more {
+  display: none;
+  position: relative;
+  margin-top: 1rem;
+  color: rgba(255,255,255,0.7);
+  transition: all .8s;
+  padding-right: 3.5rem;
+}
+.movement__more::before {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 14px;
+  width: 21px;
+  border-top: 1px solid rgba(255,255,255,0.7);
+}
+.movement__more::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  width: 8px;
+  height: 8px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border-top: 1px solid rgba(255,255,255,0.7);
+  border-right: 1px solid rgba(255,255,255,0.7);
+}
+.movement__item:hover,
+.movement__item:focus {
+  flex: 2;
+}
+.movement__item:hover .movement__cont,
+.movement__item:focus .movement__cont {
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 10%;
+}
+.movement__item:hover .movement__title,
+.movement__item:focus .movement__title {
+  font-size: 2.8rem;
+  text-align: left;
+}
+.movement__item:hover .movement__more,
+.movement__item:focus .movement__more {
+  display: block;
+}
+/* vehicles */
+.main__section.vehicles {
+  background-color: #f6f2ed;
+  overflow: hidden;
+}
+.vehicles-swiper {
+  width: 100%;
+  padding-right: 15%;
+  overflow: visible;
+}
+.vehicles-swiper .swiper-wrapper {
+  margin: 0 -2rem 4rem -2rem;
+}
+.vehicles__item {
+  position: relative;
+  padding: 0 2rem;
+  width: 100%;
+  height: 37.8rem;
+  cursor: pointer;
+}
+.vehicles__img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.vehicles__img::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(7, 7, 8, 0.5);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, rgba(7, 7, 8, 0.5)), to(rgba(7, 7, 8, 0)));
+  background: -o-linear-gradient(bottom, rgba(7, 7, 8, 0.5) 10%, rgba(7, 7, 8, 0));
+  background: linear-gradient(to top, rgba(7, 7, 8, 0.5) 10%, rgba(7, 7, 8, 0));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba(7, 7, 8, 0.5) 10%', endColorstr='rgba(7, 7, 8, 0)', GradientType=1);
+}
+.vehicles__cont {
+  position: absolute;
+  bottom: 5.5rem;
+  left: 8.5rem;
+}
+.vehicles__title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+.vehicles-swiper .swiper-scrollbar {
+  bottom: -4px;
+}
+
+/* magazine */
 .magazine__list {
   max-width: 1060px;
   display: flex;
@@ -137,7 +355,7 @@ body {color: #05141f; font-size: 1em; font-family: "KiaSignatureFix", sans-serif
   width: 33.3%;
   margin: 0 1.5rem;
 }
-.magazine__txt {
+.magazine__cont {
   margin-top: 2rem;
 }
 .magazine__description {
@@ -150,21 +368,6 @@ body {color: #05141f; font-size: 1em; font-family: "KiaSignatureFix", sans-serif
 }
 .magazine-btn {
   margin-top: 4rem;
-}
-.btn {
-  display: inline-block;
-  padding: 13px 28px 12px 28px;
-  border: 1px solid #05141f;
-  font-size: 1.6rem;
-  font-weight: 700;
-  line-height: 1.2;
-  vertical-align: middel;
-  transition: all .2s ease-out;
-}
-.btn:hover {
-  color: #fff;
-  background-color: #05141f;
-  opacity: .8;
 }
 
 /* footer */
@@ -238,7 +441,6 @@ body {color: #05141f; font-size: 1em; font-family: "KiaSignatureFix", sans-serif
   }
 }
 @media screen and (max-width: 959px) {
-  .is-open
   /* header */
   .header {
     height: auto;
@@ -272,6 +474,9 @@ body {color: #05141f; font-size: 1em; font-family: "KiaSignatureFix", sans-serif
     position: relative;
     background-color: #fff;
   }
+  .is-open .menu-toggle.open-btn {
+    display: none;
+  }
   .menu-toggle.close-btn {
     display: none;
   }
@@ -279,7 +484,7 @@ body {color: #05141f; font-size: 1em; font-family: "KiaSignatureFix", sans-serif
   .line + .line {
     margin-top: 7px;
   }
-  .header__nav::before {
+  .header__nav.is-open::before {
     content: '';
     position: fixed;
     top: 0;
@@ -388,28 +593,60 @@ body {color: #05141f; font-size: 1em; font-family: "KiaSignatureFix", sans-serif
   .menu-toggle.close-btn {
     display: block;
   }
-  .menu-toggle .line {
+  .menu-toggle.close-btn .line {
     background-color: #05141f;
   }
-  .menu-toggle .line:first-child {
+  .menu-toggle.close-btn .line:first-child {
     top: 8px;
     transform: rotate(45deg);
   }
-  .menu-toggle .line:nth-child(2) {
+  .menu-toggle.close-btn .line:nth-child(2) {
     opacity: 0;
   }
-  .menu-toggle .line:nth-child(3) {
+  .menu-toggle.close-btn .line:nth-child(3) {
     top: -8px;
     transform: rotate(-45deg);
   }
-
 
   /* main */
   .main {
     padding-top: 0;
   }
+  .main__section {
+    padding: 4rem 0;
+  }
+  .section__inner {
+    padding: 0 3rem;
+  }
+  .section__title {
+    font-size: 2.6rem;
+  }
+  .section__description {
+    margin-bottom: 3rem;
+  }
 
+  /* banner */
+  .main__banner {
+    /* z-index: -1; */
+  }
+  .banner {
+    height: calc(100vh / 1.15);
+  }
+  .banner__title {
+    font-size: 3.2rem;
+  }
 
+  /* movement, vehicles */
+
+  .magazine__list {
+    max-width: none;
+  }
+  .magazine__description {
+    font-size: 1.4rem;
+  }
+  .magazine__title {
+    font-size: 1.6rem;
+  }
 
 
   /* footer */
@@ -429,4 +666,46 @@ body {color: #05141f; font-size: 1em; font-family: "KiaSignatureFix", sans-serif
   }
 }
 
-@media screen and (max-width: 719px) {}
+@media screen and (max-width: 719px) {
+  
+  /* main */
+
+  /* banner */
+  .desktop-src {
+    display: none;
+  }
+  .mobile-src {
+    display: block;
+  }
+  .banner__cont {
+    top: auto;
+    bottom: 19%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    padding: 0 2rem;
+    text-align: center;
+  } 
+  .banner__cont .btn {
+    margin-top: 1.5rem;
+  }
+
+  /* movement, vehicles */
+  .magazine__list {
+    flex-direction: column;
+    margin: 0;
+  }
+  .magazine__item {
+    width: 100%;
+    margin: 0;
+  }
+  .magazine__item + .magazine__item {
+    margin-top: 3rem;
+  }
+
+  /* footer */
+  .footer__container {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
